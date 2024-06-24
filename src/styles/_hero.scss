@@ -1,0 +1,67 @@
+
+.hero {
+    height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    background-image: url(../images/cake\ aniversario.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    position: relative;
+
+    .container {
+        position: relative;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        content: "";
+        opacity: .6;
+    }
+
+    &__text {
+        margin-bottom: 64px;
+        margin-top: 280px;
+        font-size: 50px;
+        line-height: 60px;
+        color: #fff;
+        text-align: center;
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        height: 150px;
+    }
+
+    @media (max-width: 640px) {
+        height: 150vh;
+
+        &__logo {
+            height: 110px;
+        }
+
+        &__text {
+            margin-top: 50px;
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__logo {
+            height: 150px;
+        }
+
+        &__text {
+            margin-top: 200px;
+            font-size: 35px;
+            line-height: 40px;
+        }
+    }
+}
